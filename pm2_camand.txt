@@ -1,0 +1,17 @@
+PM2 command
+cd C:\Users\spd-d\OneDrive\Desktop\Camera_project\version_6
+
+pm2 start ecosystem.config.js
+
+pm2 start Streamlit_show.py --interpreter python --interpreter-args "-m streamlit run"
+pm2 start server.py --interpreter python --watch
+pm2 start client.py --interpreter python
+pm2 start "C:\Users\spd-d\OneDrive\Desktop\Camera_project\version_6\open-opera.bat" --interpreter cmd
+
+npm install pm2-windows-startup -g
+pm2-startup install
+
+pm2 list
+pm2 save
+
+netstat -ano | find "169.254.52.155"
