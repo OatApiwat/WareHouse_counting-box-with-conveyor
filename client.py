@@ -788,7 +788,6 @@ def delete_from_env(record_path):
     except Exception as e:
         print(f"Error: {e}")
 
-
 def connect_to_server():
     while True:
         try:
